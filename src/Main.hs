@@ -15,3 +15,4 @@ main = do
       cREATE_ALWAYS
       fILE_ATTRIBUTE_NORMAL
       (maybePtr Nothing)
+  pure ()
