@@ -6,7 +6,9 @@ import Foreign.C.String
 
 main :: IO ()
 main = do
-  withCString "бла" $ \fname ->
+  [x] <- getArgs
+  let filename = if x == "eng" then "bla" else "бла"
+  withCString filename $ \fname ->
     failIfWithRetry (==iNVALID_HANDLE_VALUE) "createFileA" $
       createFileA
         fname
