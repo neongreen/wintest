@@ -2,6 +2,7 @@ module Main where
 
 import CF
 import System.Win32
+import Foreign.C.String
 
 main :: IO ()
 main = do
